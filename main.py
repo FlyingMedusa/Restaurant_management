@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import Label, Button
+from tkinter import Label, Button, StringVar
 import time
 
 localtime = time.asctime(time.localtime(time.time()))
@@ -56,24 +56,24 @@ class App1:
 
         # _____ Entry Food _____
 
-        self.entry1 = tk.Entry(master=top, background="#d9d9d9", foreground="#c60000",selectbackground="#f2a343", font=font13)
+        self.entry1 = tk.Entry(master=top, textvariable=rand,background="#d9d9d9", foreground="#c60000",selectbackground="#f2a343", font=font13)
         self.entry1.place(relx=0.16, rely=0.25)
-        self.entry1 = tk.Entry(master=top, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
+        self.entry1 = tk.Entry(master=top, textvariable=fries, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
                                font=font13)
         self.entry1.place(relx=0.16, rely=0.32)
-        self.entry1 = tk.Entry(master=top, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
+        self.entry1 = tk.Entry(master=top, textvariable=chkburger, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
                                font=font13)
         self.entry1.place(relx=0.16, rely=0.4)
-        self.entry1 = tk.Entry(master=top, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
+        self.entry1 = tk.Entry(master=top, textvariable=bigking, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
                                font=font13)
         self.entry1.place(relx=0.16, rely=0.48)
-        self.entry1 = tk.Entry(master=top, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
+        self.entry1 = tk.Entry(master=top, textvariable=chkroyal, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
                                font=font13)
         self.entry1.place(relx=0.16, rely=0.56)
-        self.entry1 = tk.Entry(master=top, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
+        self.entry1 = tk.Entry(master=top, textvariable=vegsal, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
                                font=font13)
         self.entry1.place(relx=0.16, rely=0.64)
-        self.entry1 = tk.Entry(master=top, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
+        self.entry1 = tk.Entry(master=top, textvariable=drinks, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
                                font=font13)
         self.entry1.place(relx=0.16, rely=0.71)
 
@@ -138,19 +138,19 @@ class App1:
 
         # _____ Costs _____
 
-        self.Label12 = tk.Label(master=top, text="Cost :", background="#091833", font=font12,
+        self.Label12 = tk.Label(master=top, textvariable=cost, text="Cost :", background="#091833", font=font12,
                                 foreground="#e16740")
         self.Label12.place(relx=0.39, rely=0.32)
-        self.Label12 = tk.Label(master=top, text="Service charge :", background="#091833", font=font12,
+        self.Label12 = tk.Label(master=top, textvariable=service_charge, text="Service charge :", background="#091833", font=font12,
                                 foreground="#bac8bd")
         self.Label12.place(relx=0.34, rely=0.4)
-        self.Label12 = tk.Label(master=top, text="Tax :", background="#091833", font=font12,
+        self.Label12 = tk.Label(master=top, textvariable=tax, text="Tax :", background="#091833", font=font12,
                                 foreground="#bac8bd")
         self.Label12.place(relx=0.395, rely=0.48)
-        self.Label12 = tk.Label(master=top, text="Subtotal :", background="#091833", font=font12,
+        self.Label12 = tk.Label(master=top, textvariable=subtotal, text="Subtotal :", background="#091833", font=font12,
                                 foreground="#bac8bd")
         self.Label12.place(relx=0.38, rely=0.56)
-        self.Label12 = tk.Label(master=top, text="Total :", background="#091833", font=font12,
+        self.Label12 = tk.Label(master=top, textvariable=total, text="Total :", background="#091833", font=font12,
                                 foreground="#bac8bd")
         self.Label12.place(relx=0.39, rely=0.64)
 
@@ -164,7 +164,7 @@ class App1:
         self.entry13.place(relx=0.47, rely=0.41)
         self.entry13 = tk.Entry(master=top, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
                                font=font13)
-        self.entry13.place(relx=0.47, rely=0.5)
+        self.entry13.place(relx=0.47, rely=0.49)
         self.entry13 = tk.Entry(master=top, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
                                font=font13)
         self.entry13.place(relx=0.47, rely=0.57)
@@ -225,7 +225,22 @@ def list1():
     labelinfo = Label(price, text="20", foreground="#f2a343", font="Al-Aramco 19 bold", background="#091833")
     labelinfo.grid(row=6, column=1)
 
-
 root = tk.Tk()
+rand = tk.StringVar()
+fries = tk.StringVar()
+chkburger = tk.StringVar()
+bigking = tk.StringVar()
+chkroyal = tk.StringVar()
+vegsal = tk.StringVar()
+drinks = tk.StringVar()
+
+cost = tk.StringVar()
+service_charge = tk.StringVar()
+tax = tk.StringVar()
+subtotal = tk.StringVar()
+total = tk.StringVar()
+
+
+
 my_gui = App1(root)
 root.mainloop()
