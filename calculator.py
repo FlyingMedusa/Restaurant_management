@@ -1,26 +1,24 @@
 expression = ""
 
 
-def press(num, equation):
+def key(elem, equation):
     global expression
-    expression = expression + str(num)
+    expression = expression + str(elem)
     equation.set(expression)
 
 
-def equalpress(equation):
+def equal_key(equation):
     try:
         global expression
         total = str(eval(expression))
         equation.set(total)
         expression = ""
-
     except:
-
         equation.set(" error ")
         expression = ""
 
 
-def clear(equation):
+def clear_key(equation):
     global expression
-    expression = ""
     equation.set("")
+    expression = ""

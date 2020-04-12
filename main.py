@@ -57,7 +57,7 @@ class App1:
 
         # _____ Entry Food _____
 
-        self.entry1 = tk.Entry(master=top, textvariable=rand,background="#d9d9d9", foreground="#c60000",selectbackground="#f2a343", font=font13)
+        self.entry1 = tk.Entry(master=top, textvariable=rand, background="#d9d9d9", foreground="#c60000",selectbackground="#f2a343", font=font13)
         self.entry1.place(relx=0.16, rely=0.25)
         self.entry1 = tk.Entry(master=top, textvariable=fries, background="#d9d9d9", foreground="#c60000", selectbackground="#f2a343",
                                font=font13)
@@ -80,67 +80,66 @@ class App1:
 
         # _____ Calc _____
 
-        equation = tk.StringVar()
-
-        self.entry1 = tk.Entry(master=top, background="#d9d9d9", foreground="#102656", selectbackground="#f2a343",
-                               font=font13, textvariable=equation)
-        self.entry1.place(relx=0.705, rely=0.24, height=35, relwidth=0.267)
+        self.entry2 = tk.Entry(master=top, textvariable=equation, background="#d9d9d9", foreground="#102656",
+                               selectbackground="#f2a343", font=font13)
+        self.entry2.place(relx=0.705, rely=0.24, height=35, relwidth=0.267)
         equation.set('This calculator may help you!')
 
         self.Button1 = tk.Button(master=top, text='''7''', background="#285fd7", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press(7, equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key(7, equation))
         self.Button1.place(relx=0.705, rely=0.34, height=44, width=67)
         self.Button1 = tk.Button(master=top, text='''8''', background="#285fd7", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press(8, equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key(8, equation))
         self.Button1.place(relx=0.780, rely=0.34, height=44, width=67)
         self.Button1 = tk.Button(master=top, text='''9''', background="#285fd7", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press(9, equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key(9, equation))
         self.Button1.place(relx=0.856, rely=0.34, height=44, width=67)
         self.Button1 = tk.Button(master=top, text='''/''', background="#285fd7", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press("/", equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key("/", equation))
         self.Button1.place(relx=0.934, rely=0.34, height=44, width=37)
 
         self.Button1 = tk.Button(master=top, text='''4''', background="#204cac", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press(4, equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key(4, equation))
         self.Button1.place(relx=0.705, rely=0.44, height=44, width=67)
         self.Button1 = tk.Button(master=top, text='''5''', background="#204cac", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press(5, equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key(5, equation))
         self.Button1.place(relx=0.780, rely=0.44, height=44, width=67)
         self.Button1 = tk.Button(master=top, text='''6''', background="#204cac", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press(6, equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key(6, equation))
         self.Button1.place(relx=0.856, rely=0.44, height=44, width=67)
         self.Button1 = tk.Button(master=top, text='''*''', background="#204cac", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press("*", equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key("*", equation))
         self.Button1.place(relx=0.934, rely=0.44, height=44, width=37)
 
         self.Button1 = tk.Button(master=top, text='''1''', background="#183981", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press(1, equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key(1, equation))
         self.Button1.place(relx=0.705, rely=0.54, height=44, width=67)
         self.Button1 = tk.Button(master=top, text='''2''', background="#183981", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press(2, equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key(2, equation))
         self.Button1.place(relx=0.780, rely=0.54, height=44, width=67)
         self.Button1 = tk.Button(master=top, text='''3''', background="#183981", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press(3, equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key(3, equation))
         self.Button1.place(relx=0.856, rely=0.54, height=44, width=67)
         self.Button1 = tk.Button(master=top, text='''-''', background="#183981", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press("-", equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key("-", equation))
         self.Button1.place(relx=0.934, rely=0.54, height=44, width=37)
 
         self.Button1 = tk.Button(master=top, text='''0''', background="#122c63", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press(0, equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key(0, equation))
         self.Button1.place(relx=0.705, rely=0.64, height=35, width=147)
         self.Button1 = tk.Button(master=top, text='''.''', background="#122c63", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press(".", equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key(".", equation))
         self.Button1.place(relx=0.856, rely=0.64, height=35, width=67)
         self.Button1 = tk.Button(master=top, text='''+''', background="#122c63", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.press("+", equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.key("+", equation))
         self.Button1.place(relx=0.934, rely=0.64, height=35, width=37)
 
         self.Button1 = tk.Button(master=top, text='''=''', background="#102656", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=cal.equalpress(equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.equal_key(equation))
         self.Button1.place(relx=0.705, rely=0.72, height=44, width=222)
+
         self.Button1 = tk.Button(master=top, text='''C''', background="#102656", font=font14,
-                                 foreground="#ffffff", borderwidth='0', command=cal.clear(equation))
+                                 foreground="#ffffff", borderwidth='0', command=lambda: cal.clear_key(equation))
         self.Button1.place(relx=0.934, rely=0.72, height=44, width=37)
 
         # _____ Costs _____
@@ -234,6 +233,7 @@ def list1():
 
 
 root = tk.Tk()
+equation = tk.StringVar()
 rand = tk.StringVar()
 fries = tk.StringVar()
 chkburger = tk.StringVar()
