@@ -187,8 +187,12 @@ class App1:
         self.Button2.place(relx=0.156, rely=0.86, height=36, width=107)
         self.Button2 = tk.Button(master=top, text='RESET', background='#f2a343', font=font16)
         self.Button2.place(relx=0.272, rely=0.86, height=36, width=107)
-        self.Button2 = tk.Button(master=top, text='EXIT', background='#f2a343', font=font16)
+        self.Button2 = tk.Button(master=top, text='EXIT', background='#f2a343', font=font16, command=close_window)
         self.Button2.place(relx=0.389, rely=0.86, height=36, width=107)
+
+
+def close_window():
+    root.destroy()
 
 
 root = tk.Tk()
