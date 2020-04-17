@@ -12,5 +12,7 @@ the visual part. My aim is to create a fully responsive system.
     - [main file]
 - calculator.py
     - [a module responsible for calculations entered into the calculator]
+- price_button.py
+    - [responsible for proper display of a price window and its content]
 - restaurant_management_system.tcl
     - [alternative version of the interface created in PAGE]
