@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import Label, Button, StringVar
 import time
 import calculator as cal
+import price_button as pb
 
 localtime = time.asctime(time.localtime(time.time()))
 
@@ -126,7 +127,7 @@ class App1:
 
         self.Button1 = tk.Button(master=top, text='''0''', background="#122c63", font=font14,
                                  foreground="#ffffff", borderwidth='0', command=lambda: cal.key(0, equation))
-        self.Button1.place(relx=0.705, rely=0.64, height=35, width=147)
+        self.Button1.place(relx=0.705, rely=0.64, height=35, width=145)
         self.Button1 = tk.Button(master=top, text='''.''', background="#122c63", font=font14,
                                  foreground="#ffffff", borderwidth='0', command=lambda: cal.key(".", equation))
         self.Button1.place(relx=0.856, rely=0.64, height=35, width=67)
@@ -180,7 +181,7 @@ class App1:
 
         # ___ Control Buttons ___
 
-        self.Button2 = tk.Button(master=top, text='PRICE', background='#f2a343', font=font16, command=list1)
+        self.Button2 = tk.Button(master=top, text='PRICE', background='#f2a343', font=font16, command=pb.list1)
         self.Button2.place(relx=0.039, rely=0.86, height=36, width=107)
         self.Button2 = tk.Button(master=top, text='TOTAL', background='#f2a343', font=font16)
         self.Button2.place(relx=0.156, rely=0.86, height=36, width=107)
@@ -188,48 +189,6 @@ class App1:
         self.Button2.place(relx=0.272, rely=0.86, height=36, width=107)
         self.Button2 = tk.Button(master=top, text='EXIT', background='#f2a343', font=font16)
         self.Button2.place(relx=0.389, rely=0.86, height=36, width=107)
-
-
-def list1():
-    price = tk.Tk()
-    price.geometry("300x250+350+200")
-    price.title("Price List")
-    price.configure(background="#091833")
-
-    labelinfo = Label(price, text="ITEM", foreground="#bac8bd", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=0, column=0)
-    labelinfo = Label(price, text="PRICE", foreground="#f2a343", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=0, column=1)
-
-    labelinfo = Label(price, text="Fried Potato", foreground="#bac8bd", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=1, column=0)
-    labelinfo = Label(price, text="30", foreground="#f2a343", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=1, column=1)
-
-    labelinfo = Label(price, text="Chicken Burger", foreground="#bac8bd", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=2, column=0)
-    labelinfo = Label(price, text="40", foreground="#f2a343", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=2, column=1)
-
-    labelinfo = Label(price, text="Big King", foreground="#bac8bd", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=3, column=0)
-    labelinfo = Label(price, text="35", foreground="#f2a343", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=3, column=1)
-
-    labelinfo = Label(price, text="Chicken Royal", foreground="#bac8bd", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=4, column=0)
-    labelinfo = Label(price, text="45", foreground="#f2a343", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=4, column=1)
-
-    labelinfo = Label(price, text="Vegan Salad", foreground="#bac8bd", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=5, column=0)
-    labelinfo = Label(price, text="25", foreground="#f2a343", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=5, column=1)
-
-    labelinfo = Label(price, text="Drinks", foreground="#bac8bd", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=6, column=0)
-    labelinfo = Label(price, text="20", foreground="#f2a343", font="Al-Aramco 19 bold", background="#091833")
-    labelinfo.grid(row=6, column=1)
 
 
 root = tk.Tk()
